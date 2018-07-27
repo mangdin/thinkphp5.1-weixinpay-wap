@@ -1,0 +1,23 @@
+{
+    "name": "mangdin/thinkphp5.1-weixinpay-wap",
+    "description": "thinkphp5.1 微信支付 H5手机网页支付",
+    "keywords": [
+      "mangdin",
+      "thinkphp5.1",
+      "auth"
+    ],
+    "license": "Apache-2.0",
+    "authors": [
+        {
+            "name": "mangdin",
+            "email": "service@mangdin.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {},
+    "autoload": {
+        "psr-4": {
+          "mangdin\\weixinpaywap\\": ""
+        }
+      }
+}
