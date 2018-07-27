@@ -79,6 +79,7 @@ class WeixinH4Pay
         if ($sign===$data_sign && $data['return_code']=='SUCCESS' && $data['result_code']=='SUCCESS') {
             $result=$data;
         }else{
+            file_put_contents('./paylog.txt',json($data));
             $result=false;
         }
         // 返回状态给微信服务器
