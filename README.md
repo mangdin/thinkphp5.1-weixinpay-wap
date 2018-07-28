@@ -11,7 +11,7 @@ thinkphp5.1 微信支付 手机H5 支付
      * @param $orderid  //订单号
      */
     public function h5wap($orderid){// 获取配置项
-        Config::get('weixinpay_wap.');
+        \think\facade\Config::get('weixinpay_wap.');
         $order=array(
             'body' => '测试描述',// 商品描述（需要根据自己的业务修改）
             'total_fee' => 1,// 订单金额  以(分)为单位（需要根据自己的业务修改）
@@ -19,8 +19,7 @@ thinkphp5.1 微信支付 手机H5 支付
             'product_id' => '234242342',// 商品id（需要根据自己的业务修改）
             'trade_type' => 'MWEB',// JSAPI公众号支付
             );
-
-        // 统一下单 获取prepay_id
+        //统一下单 获取prepay_id
         $redirect_url=urlencode('http://'.$_SERVER['HTTP_HOST'].'/index.php');  //支付完成后跳回地址
         $weixin = new \mangdin\weixinpaywap\WeixinH4Pay();
         $unified_order= $weixin->unifiedOrder($order);
